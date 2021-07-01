@@ -15,7 +15,8 @@ before_install:
 notifications:
   email:
     recipients:
-      - bunnyppl@gmail.com
+      - nadine.heng@ncs.com.sg
+      - nyi_zheng@hotmail.com
     on_success: always
     on_failure: always
 branches:
@@ -29,7 +30,7 @@ script:
   - npm audit fix
   - npm update
   - npm i @angular-devkit/build-angular@0.803.24
-  - ng build --prod --base-href https://kenken64.github.io/bitcoin-order-app/
+  - ng build --prod --base-href https://github.com/chibipaper/bitcoin-order-app-original.git
 
 after_success:
   - docker build -t kenken64/bitcoin-app .
